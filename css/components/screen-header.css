@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--horizontal-space);
+  margin-bottom: 15px;
   background-color: var(--main-color);
   position: sticky;
   top: 27px;
@@ -10,8 +11,8 @@
   right: 0;
   width: 100%;
   box-sizing: border-box;
+
   background-color: white;
-  margin: 0 auto;
 }
 .screen-header__title {
   font-size: 32px;
@@ -19,4 +20,18 @@
 }
 .screen-header__icons span {
   margin-left: 25px;
+  position: relative;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateCog 1s linear infinite;
 }
