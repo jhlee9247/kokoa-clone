@@ -33,5 +33,5 @@
 }
 
 .screen-header__icons .fa-gear:hover {
-  animation: rotateCog 1s linear infinite;
+  animation: rotateCog 2s linear infinite;
 }
