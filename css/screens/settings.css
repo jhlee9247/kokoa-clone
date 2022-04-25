@@ -14,3 +14,8 @@
 .settings__setting-column:last-child {
   opacity: 0.5;
 }
+.settings__setting .fa-circle {
+  color: tomato;
+  font-size: 12px;
+  margin-left: 5px;
+}

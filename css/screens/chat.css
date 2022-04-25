@@ -16,13 +16,17 @@
 }
 
 @keyframes fadeIn {
-  from {
-    transform: translateY(30px);
+  0% {
     opacity: 0;
-  }
-  to {
     transform: none;
+  }
+  1% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
     opacity: 1;
+    transform: none;
   }
 }
 
@@ -30,7 +34,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 0.8s linear;
 }
 .chat__timestamp {
   color: white;
@@ -39,11 +42,35 @@
   border-radius: 25px;
   font-size: 14px;
   margin-bottom: 25px;
+  animation: fadeIn 0.8s linear;
 }
+
 .message-row {
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+}
+@keyframes message-rowX {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.message-row--your {
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: message-rowX 0.3s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.message-row--own {
+  justify-content: flex-end;
+  transform: translateX(50px);
+  opacity: 0;
+  animation: message-rowX 0.3s ease-in-out forwards;
+  animation-delay: 1.7s;
 }
 .message-row img {
   width: 50px;
@@ -72,9 +99,7 @@
   opacity: 0.8;
   font-size: 14px;
 }
-.message-row--own {
-  justify-content: flex-end;
-}
+
 .message-row--own .message__bebble {
   background-color: var(--yellow);
   border-top-right-radius: 0px;

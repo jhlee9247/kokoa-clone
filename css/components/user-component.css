@@ -60,3 +60,24 @@
 .user-component-chat {
   margin-bottom: 20px;
 }
+
+@keyframes commentRotate {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotateZ(15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.user-component__column .fa-message {
+  transition: color 0.3s ease-in-out;
+}
+
+.user-component__column .fa-message:hover {
+  animation: commentRotate 1s ease-in-out infinite;
+  color: var(--yellow);
+}
